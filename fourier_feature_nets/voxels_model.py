@@ -23,7 +23,7 @@ class Voxels(nn.Module):
             "scale": scale
         }
 
-        voxels = torch.zeros((1, 4, side, side, side), dtype=torch.float32)
+        voxels = torch.zeros((1, 4, side, side, side), dtype=torch.float32) # 4 channels here: RGB + density
         self.voxels = nn.Parameter(voxels)
         bias = torch.zeros(4, dtype=torch.float32)
         bias[:3] = torch.logit(torch.FloatTensor([1e-5, 1e-5, 1e-5]))

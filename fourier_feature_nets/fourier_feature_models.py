@@ -14,7 +14,6 @@ class FourierFeatureMLP(nn.Module):
                  a_values: torch.Tensor, b_values: torch.Tensor,
                  layer_channels: List[int]):
         """Constructor.
-
         Args:
             num_inputs (int): Number of dimensions in the input
             num_outputs (int): Number of dimensions in the output
